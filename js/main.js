@@ -23,6 +23,10 @@ const loadContent = async (page) => {
     if (page === 'users') {
       import('./pages/users.js')
         .then(usersModule => usersModule.init());  // llama la función modulo en user.js
+    }else if (page === 'ventas'){
+      import('./pages/ventas.js').then(ventaModule => ventaModule.init());
+    }else if (page === 'venta_detalle'){
+      import('./pages/venta_detalle.js').then(ventaDetalleModule => ventaDetalleModule.init());
     }
 
   } catch (error) {
